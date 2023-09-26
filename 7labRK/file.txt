@@ -1,0 +1,7 @@
+show
+help
+execute_script file.txt
+show
+print_field_ascending_house
+average_number_of_rooms
+

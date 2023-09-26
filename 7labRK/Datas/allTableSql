@@ -1,0 +1,35 @@
+-- Создание таблицы Transport (перечисление)
+CREATE TYPE TransportEnum AS ENUM ('FEW', 'NONE', 'NORMAL');
+
+-- Создание таблицы User
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    passwd VARCHAR(255) NOT NULL
+);
+
+-- Создание таблицы House
+CREATE TABLE house (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    year BIGINT NOT NULL CHECK (year > 0),
+    numberOfFloors BIGINT NOT NULL
+);
+
+-- Создание таблицы Flat
+CREATE TABLE flat (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    x BIGINT NOT NULL,
+    y FLOAT NOT NULL,
+    creationDate TIMESTAMP NOT NULL,
+    area FLOAT NOT NULL,
+    numberOfRooms INT NOT NULL,
+    numberOfBathrooms BIGINT,
+    "new" BOOLEAN NOT NULL,
+    transport TransportEnum,
+    houseid INT NOT NULL,
+    userId INT NOT NULL,
+    FOREIGN KEY (houseid) REFERENCES House(id),
+    FOREIGN KEY (userId) REFERENCES users(id)
+);
