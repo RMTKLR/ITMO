@@ -1,0 +1,21 @@
+<list>
+  <data.Flat>
+    <id>1</id>
+    <name>sadf</name>
+    <coordinates>
+      <x>3.0</x>
+      <y>3.0</y>
+    </coordinates>
+    <creationDate>2024-02-22T16:28:45.2528881</creationDate>
+    <area>3</area>
+    <numberOfRooms>3</numberOfRooms>
+    <numberOfBathrooms>3</numberOfBathrooms>
+    <New>true</New>
+    <transport>FEW</transport>
+    <house>
+      <name>sfa</name>
+      <year>3</year>
+      <numberOfFloors>3</numberOfFloors>
+    </house>
+  </data.Flat>
+</list>
